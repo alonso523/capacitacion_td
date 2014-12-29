@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  modalidad_id: 1
+  codigo: MyString
+  nombre: MyString
+  descripcion: MyString
+
+two:
+  modalidad_id: 1
+  codigo: MyString
+  nombre: MyString
+  descripcion: MyString

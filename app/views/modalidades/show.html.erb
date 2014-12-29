@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @modalidade.nombre %>
+</p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @modalidade.codigo %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @modalidade.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_modalidade_path(@modalidade) %> |
+<%= link_to 'Back', modalidades_path %>

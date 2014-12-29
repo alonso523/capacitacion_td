@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Grupo:</strong>
+  <%= @notum.grupo_id %>
+</p>
+
+<p>
+  <strong>Estudiante:</strong>
+  <%= @notum.estudiante_id %>
+</p>
+
+<p>
+  <strong>Nota:</strong>
+  <%= @notum.nota %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @notum.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_notum_path(@notum) %> |
+<%= link_to 'Back', nota_path %>

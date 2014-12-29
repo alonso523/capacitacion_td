@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Departamento:</strong>
+  <%= @estudiante.departamento_id %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @estudiante.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @estudiante.apellido %>
+</p>
+
+<p>
+  <strong>Observacion:</strong>
+  <%= @estudiante.observacion %>
+</p>
+
+<%= link_to 'Edit', edit_estudiante_path(@estudiante) %> |
+<%= link_to 'Back', estudiantes_path %>

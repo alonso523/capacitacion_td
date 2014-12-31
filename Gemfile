@@ -1,5 +1,12 @@
 source 'https://rubygems.org'
 
+#Gemas para el manejo de autenticaciones
+gem 'omniauth-twitter'
+
+# Gema utilizada para la creación de login de usuarios que no tienen cuenta en fb o twitter
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-digitalocean'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'

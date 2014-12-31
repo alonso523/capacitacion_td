@@ -1,4 +1,25 @@
 Rails.application.routes.draw do
+
+
+
+  devise_for :users do
+    get '/sign_out' => 'devise/sessions#destroy'
+    get '/log_in' => 'devise/sessions#new'
+    get '/log_out' => 'devise/sessions#destroy'
+    get '/sign_up' => 'devise/registrations#new'
+    get '/edit_profile' => 'devise/registrations#edit'
+  end
+  #Página de inicio
+  root :to => 'cursos#index'
+
+#Utilizados para poder lograr la autenticación
+#get '/auth/:provider/callback', to: 'sesiones#create'
+#get '/signout', to: 'sesiones#destroy', :as => :signout
+
+#  match '/auth/:provider/callback' => 'sesiones#create'
+ # match "/signout" => "sesiones#destroy", :as => :signout
+ # match "/menu" => "inicio#menu", :as => :menu
+
   resources :grupos
 
   resources :nota

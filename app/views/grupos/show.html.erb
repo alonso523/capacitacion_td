@@ -2,28 +2,28 @@
 
 <p>
   <strong>Curso:</strong>
-  <%= @grupo.curso_id %>
+  <%= Curso.find(@grupo.curso_id).nombre %>
 </p>
 
 <p>
   <strong>Profesor:</strong>
-  <%= @grupo.profesor_id %>
+  <%= Profesore.find(@grupo.profesor_id).nombre %>
 </p>
 
 <p>
   <strong>Sede:</strong>
-  <%= @grupo.sede_id %>
+  <%= Sede.find(@grupo.sede_id).nombre %>
 </p>
 
 <p>
   <strong>Asistente:</strong>
-  <%= @grupo.asistente_id %>
+  <%= Asistente.find(@grupo.asistente_id).nombre %>
 </p>
 
 <p>
-  <strong>Descripcion:</strong>
+  <strong>Descripción:</strong>
   <%= @grupo.descripcion %>
 </p>
 
-<%= link_to 'Edit', edit_grupo_path(@grupo) %> |
-<%= link_to 'Back', grupos_path %>
+<%= link_to 'Editar', edit_grupo_path(@grupo) %> |
+<%= link_to 'Atrás', grupos_path %>

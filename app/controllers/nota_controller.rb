@@ -28,7 +28,7 @@ class NotaController < ApplicationController
 
     respond_to do |format|
       if @notum.save
-        format.html { redirect_to @notum, notice: 'Notum was successfully created.' }
+        format.html { redirect_to @notum, notice: 'La nota fue creada exitosamente' }
         format.json { render :show, status: :created, location: @notum }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class NotaController < ApplicationController
   def update
     respond_to do |format|
       if @notum.update(notum_params)
-        format.html { redirect_to @notum, notice: 'Notum was successfully updated.' }
+        format.html { redirect_to @notum, notice: 'La nota fue actualizada exitosamente' }
         format.json { render :show, status: :ok, location: @notum }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class NotaController < ApplicationController
   def destroy
     @notum.destroy
     respond_to do |format|
-      format.html { redirect_to nota_url, notice: 'Notum was successfully destroyed.' }
+      format.html { redirect_to nota_url, notice: 'La nota fue eliminada exitosamente.' }
       format.json { head :no_content }
     end
   end

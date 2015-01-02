@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Departamentos</h1>
+<h1>Lista de Departamentos</h1>
 
 <table>
   <thead>
@@ -18,9 +18,9 @@
         <td><%= departamento.codigo %></td>
         <td><%= departamento.nombre %></td>
         <td><%= departamento.descripcion %></td>
-        <td><%= link_to 'Show', departamento %></td>
-        <td><%= link_to 'Edit', edit_departamento_path(departamento) %></td>
-        <td><%= link_to 'Destroy', departamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', departamento %></td>
+        <td><%= link_to 'Editar', edit_departamento_path(departamento) %></td>
+        <td><%= link_to 'Eliminar', departamento, method: :delete, data: { confirm: 'Está seguro que desea eliminar el Departamento?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,5 @@
 
 <br>
 
-<%= link_to 'New Departamento', new_departamento_path %>
+<%= link_to 'Nuevo Departamento', new_departamento_path %>
+<%= link_to 'Inicio', root_path %>

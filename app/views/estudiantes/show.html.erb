@@ -2,7 +2,7 @@
 
 <p>
   <strong>Departamento:</strong>
-  <%= @estudiante.departamento_id %>
+  <%= Departamento.find(@estudiante.departamento_id).nombre %>
 </p>
 
 <p>
@@ -16,9 +16,9 @@
 </p>
 
 <p>
-  <strong>Observacion:</strong>
+  <strong>Observación:</strong>
   <%= @estudiante.observacion %>
 </p>
 
-<%= link_to 'Edit', edit_estudiante_path(@estudiante) %> |
-<%= link_to 'Back', estudiantes_path %>
+<%= link_to 'Editar', edit_estudiante_path(@estudiante) %> |
+<%= link_to 'Atrás', estudiantes_path %>

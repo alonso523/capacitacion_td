@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     get '/edit_profile' => 'devise/registrations#edit'
   end
   #Página de inicio
-  root :to => 'cursos#index'
+  root :to => 'inicios#inicio'
 
 #Utilizados para poder lograr la autenticación
 #get '/auth/:provider/callback', to: 'sesiones#create'

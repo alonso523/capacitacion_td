@@ -28,7 +28,7 @@ class AsistentesController < ApplicationController
 
     respond_to do |format|
       if @asistente.save
-        format.html { redirect_to @asistente, notice: 'Asistente was successfully created.' }
+        format.html { redirect_to @asistente, notice: 'El Asistente fue creado exitosamente.' }
         format.json { render :show, status: :created, location: @asistente }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class AsistentesController < ApplicationController
   def update
     respond_to do |format|
       if @asistente.update(asistente_params)
-        format.html { redirect_to @asistente, notice: 'Asistente was successfully updated.' }
+        format.html { redirect_to @asistente, notice: 'El Asistente fue actualizado exitosamente.' }
         format.json { render :show, status: :ok, location: @asistente }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class AsistentesController < ApplicationController
   def destroy
     @asistente.destroy
     respond_to do |format|
-      format.html { redirect_to asistentes_url, notice: 'Asistente was successfully destroyed.' }
+      format.html { redirect_to asistentes_url, notice: 'El Asistente fue eliminado exitosamente.' }
       format.json { head :no_content }
     end
   end

@@ -2,12 +2,12 @@
 
 <p>
   <strong>Grupo:</strong>
-  <%= @notum.grupo_id %>
+  <%= Grupo.find(@notum.grupo_id).descripcion %>
 </p>
 
 <p>
   <strong>Estudiante:</strong>
-  <%= @notum.estudiante_id %>
+  <%= Estudiante.find(@notum.estudiante_id).nombre %>
 </p>
 
 <p>
@@ -20,5 +20,5 @@
   <%= @notum.descripcion %>
 </p>
 
-<%= link_to 'Edit', edit_notum_path(@notum) %> |
-<%= link_to 'Back', nota_path %>
+<%= link_to 'Editar', edit_notum_path(@notum) %> |
+<%= link_to 'Atrás', nota_path %>

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Profesores</h1>
+<h1>Lista de profesores</h1>
 
 <table>
   <thead>
@@ -18,9 +18,9 @@
         <td><%= profesore.nombre %></td>
         <td><%= profesore.apellido %></td>
         <td><%= profesore.observacion %></td>
-        <td><%= link_to 'Show', profesore %></td>
-        <td><%= link_to 'Edit', edit_profesore_path(profesore) %></td>
-        <td><%= link_to 'Destroy', profesore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', profesore %></td>
+        <td><%= link_to 'Editar', edit_profesore_path(profesore) %></td>
+        <td><%= link_to 'Eliminar', profesore, method: :delete, data: { confirm: 'Está seguro que desea eliminar el elemento?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,5 @@
 
 <br>
 
-<%= link_to 'New Profesore', new_profesore_path %>
+<%= link_to 'Crear profesor', new_profesore_path %>
+<%= link_to 'Inicio', root_path %>

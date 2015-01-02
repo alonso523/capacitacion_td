@@ -12,22 +12,24 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :modalidad_id %><br>
-    <%= f.number_field :modalidad_id %>
+    <%= f.label :Modalidad %><br>
+    <%= f.collection_select :modalidad_id, Modalidade.all, :id, :nombre %><br />
+
   </div>
   <div class="field">
-    <%= f.label :codigo %><br>
+    <%= f.label :Código %><br>
     <%= f.text_field :codigo %>
   </div>
   <div class="field">
-    <%= f.label :nombre %><br>
+    <%= f.label :Nombre %><br>
     <%= f.text_field :nombre %>
   </div>
   <div class="field">
-    <%= f.label :descripcion %><br>
+    <%= f.label :Descripción %><br>
     <%= f.text_field :descripcion %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Crear Curso"%>
   </div>
 <% end %>
+<%= link_to 'Inicio', root_path %>

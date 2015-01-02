@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Modalidades</h1>
+<h1>Lista de Modalidades</h1>
 
 <table>
   <thead>
@@ -18,9 +18,9 @@
         <td><%= modalidade.nombre %></td>
         <td><%= modalidade.codigo %></td>
         <td><%= modalidade.descripcion %></td>
-        <td><%= link_to 'Show', modalidade %></td>
-        <td><%= link_to 'Edit', edit_modalidade_path(modalidade) %></td>
-        <td><%= link_to 'Destroy', modalidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', modalidade %></td>
+        <td><%= link_to 'Editar', edit_modalidade_path(modalidade) %></td>
+        <td><%= link_to 'Eliminar', modalidade, method: :delete, data: { confirm: 'Está seguro que desea eliminar la modalidad?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,5 @@
 
 <br>
 
-<%= link_to 'New Modalidade', new_modalidade_path %>
+<%= link_to 'Nueva modalidad', new_modalidade_path %>
+<%= link_to 'Inicio', root_path %>

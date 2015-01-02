@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Nota</h1>
+<h1>Lista de Notas</h1>
 
 <table>
   <thead>
@@ -14,15 +14,15 @@
   </thead>
 
   <tbody>
-    <% @nota.each do |notum| %>
+    <% @nota.each do |nota| %>
       <tr>
-        <td><%= notum.grupo_id %></td>
-        <td><%= notum.estudiante_id %></td>
-        <td><%= notum.nota %></td>
-        <td><%= notum.descripcion %></td>
-        <td><%= link_to 'Show', notum %></td>
-        <td><%= link_to 'Edit', edit_notum_path(notum) %></td>
-        <td><%= link_to 'Destroy', notum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= Grupo.find(nota.grupo_id).descripcion %></td>
+        <td><%= Estudiante.find(nota.estudiante_id).nombre %></td>
+        <td><%= nota.nota %></td>
+        <td><%= nota.descripcion %></td>
+        <td><%= link_to 'Mostrar', nota %></td>
+        <td><%= link_to 'Editar', edit_notum_path(nota) %></td>
+        <td><%= link_to 'Eliminar', nota, method: :delete, data: { confirm: 'Está seguro que desea eliminar la nota?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,5 @@
 
 <br>
 
-<%= link_to 'New Notum', new_notum_path %>
+<%= link_to 'Nueva Nota', new_notum_path %>
+<%= link_to 'Inicio', root_path %>

@@ -28,7 +28,7 @@ class ModalidadesController < ApplicationController
 
     respond_to do |format|
       if @modalidade.save
-        format.html { redirect_to @modalidade, notice: 'Modalidade was successfully created.' }
+        format.html { redirect_to @modalidade, notice: 'La modalidad fue creada exitosamente.' }
         format.json { render :show, status: :created, location: @modalidade }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ModalidadesController < ApplicationController
   def update
     respond_to do |format|
       if @modalidade.update(modalidade_params)
-        format.html { redirect_to @modalidade, notice: 'Modalidade was successfully updated.' }
+        format.html { redirect_to @modalidade, notice: 'La modalidad fue actualizada exitosamente.' }
         format.json { render :show, status: :ok, location: @modalidade }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class ModalidadesController < ApplicationController
   def destroy
     @modalidade.destroy
     respond_to do |format|
-      format.html { redirect_to modalidades_url, notice: 'Modalidade was successfully destroyed.' }
+      format.html { redirect_to modalidades_url, notice: 'La modalidad fue eliminada exitosamente.' }
       format.json { head :no_content }
     end
   end

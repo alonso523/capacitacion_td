@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Grupos</h1>
+<h1>Lista de Grupos</h1>
 
 <table>
   <thead>
@@ -17,14 +17,14 @@
   <tbody>
     <% @grupos.each do |grupo| %>
       <tr>
-        <td><%= grupo.curso_id %></td>
-        <td><%= grupo.profesor_id %></td>
-        <td><%= grupo.sede_id %></td>
-        <td><%= grupo.asistente_id %></td>
+        <td><%= Curso.find(grupo.curso_id).nombre %></td>
+        <td><%= Profesore.find(grupo.profesor_id).nombre %></td>
+        <td><%= Sede.find(grupo.sede_id).nombre %></td>
+        <td><%= Asistente.find(grupo.asistente_id).nombre %></td>
         <td><%= grupo.descripcion %></td>
-        <td><%= link_to 'Show', grupo %></td>
-        <td><%= link_to 'Edit', edit_grupo_path(grupo) %></td>
-        <td><%= link_to 'Destroy', grupo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', grupo %></td>
+        <td><%= link_to 'Editar', edit_grupo_path(grupo) %></td>
+        <td><%= link_to 'Eliminar', grupo, method: :delete, data: { confirm: 'Está seguro que desea eliminar el grupo?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,5 @@
 
 <br>
 
-<%= link_to 'New Grupo', new_grupo_path %>
+<%= link_to 'Nuevo Grupo', new_grupo_path %>
+<%= link_to 'Inicio', root_path %>

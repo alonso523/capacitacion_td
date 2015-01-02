@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Estudiantes</h1>
+<h1>Lista de Estudiantes</h1>
 
 <table>
   <thead>
@@ -16,13 +16,13 @@
   <tbody>
     <% @estudiantes.each do |estudiante| %>
       <tr>
-        <td><%= estudiante.departamento_id %></td>
+        <td><%= Departamento.find(estudiante.departamento_id).nombre %></td>
         <td><%= estudiante.nombre %></td>
         <td><%= estudiante.apellido %></td>
         <td><%= estudiante.observacion %></td>
-        <td><%= link_to 'Show', estudiante %></td>
-        <td><%= link_to 'Edit', edit_estudiante_path(estudiante) %></td>
-        <td><%= link_to 'Destroy', estudiante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', estudiante %></td>
+        <td><%= link_to 'Editar', edit_estudiante_path(estudiante) %></td>
+        <td><%= link_to 'Eliminar', estudiante, method: :delete, data: { confirm: 'Está seguro que lo desea eliminar?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,5 @@
 
 <br>
 
-<%= link_to 'New Estudiante', new_estudiante_path %>
+<%= link_to 'Nuevo Estudiante', new_estudiante_path %>
+<%= link_to 'Inicio', root_path %>

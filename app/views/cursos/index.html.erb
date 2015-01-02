@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Cursos</h1>
+<h1>Lista de Cursos</h1>
 
 <table>
   <thead>
@@ -20,9 +20,9 @@
         <td><%= curso.codigo %></td>
         <td><%= curso.nombre %></td>
         <td><%= curso.descripcion %></td>
-        <td><%= link_to 'Show', curso %></td>
-        <td><%= link_to 'Edit', edit_curso_path(curso) %></td>
-        <td><%= link_to 'Destroy', curso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', curso %></td>
+        <td><%= link_to 'Editar', edit_curso_path(curso) %></td>
+        <td><%= link_to 'Eliminar', curso, method: :delete, data: { confirm: 'Está seguro que desea eliminar el curso?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,5 @@
 
 <br>
 
-<%= link_to 'New Curso', new_curso_path %>
+<%= link_to 'Nuevo Curso', new_curso_path %>
+<%= link_to 'Inicio', root_path %>

@@ -2,11 +2,11 @@
 
 <p>
   <strong>Modalidad:</strong>
-  <%= @curso.modalidad_id %>
+  <%= Modalidade.find(@curso.modalidad_id).nombre %>
 </p>
 
 <p>
-  <strong>Codigo:</strong>
+  <strong>Código:</strong>
   <%= @curso.codigo %>
 </p>
 
@@ -16,9 +16,9 @@
 </p>
 
 <p>
-  <strong>Descripcion:</strong>
+  <strong>Descripción:</strong>
   <%= @curso.descripcion %>
 </p>
 
-<%= link_to 'Edit', edit_curso_path(@curso) %> |
-<%= link_to 'Back', cursos_path %>
+<%= link_to 'Editar', edit_curso_path(@curso) %> |
+<%= link_to 'Atrás', cursos_path %>

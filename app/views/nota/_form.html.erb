@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :grupo_id %><br>
-    <%= f.number_field :grupo_id %>
+    <%= f.collection_select :grupo_id, Grupo.all, :id, :descripcion %><br />
   </div>
   <div class="field">
     <%= f.label :estudiante_id %><br>
-    <%= f.number_field :estudiante_id %>
+    <%= f.collection_select :estudiante_id, Estudiante.all, :id, :nombre %><br />
   </div>
   <div class="field">
     <%= f.label :nota %><br>
@@ -28,6 +28,6 @@
     <%= f.text_field :descripcion %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Crear Nota"%>
   </div>
 <% end %>
